@@ -6,17 +6,13 @@ int main(void)
 {
     int i;
     int score[SIZE];
-    int sum = 0;
+    printf("5명의 점수를 입력하세요.\n");
 
-    printf("5명의 점수를 입력하세요. \n");
-
-    for(i=0; i<SIZE; i++)
-    {
+    for (i=0;i<SIZE;i++)
         scanf("%d", &score[i]);
-        sum += score[i];
-    }
-
-        printf("성적평균:%d\n", sum/SIZE);
+    
+    for (i=0;i<SIZE;i++)
+        printf("score[%d] = %d\n", i, score[i]);
 
     return 0;
 }
