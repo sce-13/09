@@ -6,14 +6,22 @@ int main(void)
 {
     int i;
     int a[SIZE] = {1,2,3,4,5};
-    int b[SIZE] = {1,1,3,5,5};
+    int b[SIZE] = {1,2,3,4,5};
     int flag_same = 1;
     
     for (i=0;i<SIZE;i++)
     {
         if (a[i] != b[i])
-            printf("index %i different!\n", i);
+        {
+            flag_same = 0;
+        }
+            //printf("index %i different!\n", i);
     }
         
+    if (flag_same == 1)
+        printf("same!\n");
+    else
+        printf("different!\n");
+
     return 0;
 }
